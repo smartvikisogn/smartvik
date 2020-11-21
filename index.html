@@ -25,7 +25,29 @@
     ga('create', 'UA-79221604-1', 'auto');
     ga('send', 'pageview');
   </script>
-
+  <!-- Begin Inspectlet Asynchronous Code -->
+  <script type="text/javascript">
+    (function () {
+      window.__insp = window.__insp || [];
+      __insp.push(['wid', 1205494225]);
+      var ldinsp = function () {
+        if (typeof window.__inspld != 'undefined') return;
+        window.__inspld = 1;
+        var insp = document.createElement('script');
+        insp.type = 'text/javascript';
+        insp.async = true;
+        insp.id = 'inspsync';
+        insp.src =
+          ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://cdn.inspectlet.com/inspectlet.js?wid=1205494225&r=' +
+          Math.floor(new Date().getTime() / 3600000);
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(insp, x);
+      };
+      setTimeout(ldinsp, 0);
+    })();
+  </script>
+  <!-- End Inspectlet Asynchronous Code -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -203,9 +225,7 @@
               <img src="img/portfolio/1.jpg" class="img-responsive" alt="" />
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    Gamal ost
-                  </div>
+                  <div class="project-name">Gamal ost</div>
                 </div>
               </div>
             </a>
@@ -251,9 +271,7 @@
               <img src="img/portfolio/4.png" class="img-responsive" alt="" />
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
-                  <div class="project-name">
-                    Like Vik i Sogn
-                  </div>
+                  <div class="project-name">Like Vik i Sogn</div>
                 </div>
               </div>
             </a>
@@ -316,11 +334,11 @@
           var myLocation = new google.maps.LatLng(61.087648, 6.580428);
           var mapOptions = {
             center: myLocation,
-            zoom: 11,
+            zoom: 11
           };
           var marker = new google.maps.Marker({
             position: myLocation,
-            title: 'Property Location',
+            title: 'Property Location'
           });
           var map = new google.maps.Map(
             document.getElementById('map1'),
